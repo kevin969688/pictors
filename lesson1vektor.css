@@ -1,0 +1,219 @@
+/* === Google Font Import - Poppins === */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary: rgb(82, 117, 255);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  padding: 15px 0;
+  border-bottom: 3px solid var(--primary);
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.dark-mode .navbar {
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px; /* Rounded shape */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  transition: 0.4s;
+  border-radius: 50%; /* Rounded shape */
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.toggle-label {
+  margin-left: 10px;
+  margin-right: 2rem;
+  font-size: 20px;
+}
+
+.dark-mode .slider:before {
+  content: "🌙"; /* Moon emoji */
+}
+
+.slider:before {
+  content: "☀️"; /* Sun emoji */
+}
+
+.navbar .container .logo span {
+  color: var(--primary);
+}
+
+.navbar-links {
+  display: flex;
+  margin-top: 10px;
+  gap: 40px;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.4s linear;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* Isi */
+section {
+  min-height: 1200px;
+}
+
+.title h1 {
+  padding: 7rem 1% 1rem;
+  text-align: center;
+  font-size: 2.6rem;
+  color: var(--primary);
+  margin-top: -1.5rem;
+  margin-bottom: -7rem;
+}
+
+.subtitle h2 {
+  font-size: 2.6rem;
+  color: var(--primary);
+  margin-top: 6rem;
+  margin-left: 6rem;
+  margin-bottom: -0.5px;
+}
+
+.subtitle .image1 {
+  margin-left: 5rem;
+  margin-bottom: -5rem;
+}
+
+.subtitle .subtitle-text1 {
+  margin-top: -0.5rem;
+  font-size: 25px;
+  color: var(--primary);
+  margin-left: 6rem;
+  margin-bottom: -5rem;
+}
+
+.subtitle .image2 {
+  margin-left: 5rem;
+  margin-bottom: 5px;
+}
+
+.subtitle .subtitle-text2 {
+  margin-top: -0.5rem;
+  font-size: 25px;
+  color: var(--primary);
+  margin-left: 6rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  margin-left: 29rem;
+  background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 30px;
+  border-radius: 30px;
+  transition: 0.5s;
+  color: #fff;
+}
+
+.dark-mode .button {
+  color: #333;
+}
+
+.button:hover {
+  background: transparent;
+  color: #333;
+  border: 2px solid #f77062;
+  transition: 0.5s;
+}
+
+.dark-mode .button:hover {
+  color: #fff;
+}
